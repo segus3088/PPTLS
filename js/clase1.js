@@ -68,44 +68,33 @@ function comparar(elegidoUser, elegidoRobot){
 	}
 	
 
-	else if(elegidoUser == papel){ //cuando el user seleciono papel
+	//cuando el user seleciono papel
 
-		if(elegidoRobot == tijera){
-			alert("You lost! :( " + opciones[elegidoRobot] + " Cuts " + opciones[elegidoUser]);
-		}		
-		else if(elegidoRobot == spock){
-			alert("You Win! :) " + opciones[elegidoUser] + " Disproves " + opciones[elegidoRobot]);
-		}
-		else if(elegidoRobot == lagarto){
-			alert("You lost :( " + opciones[elegidoRobot] + " Eats " + opciones[elegidoUser]);
-		}
-		else("Falta");
+	else if(elegidoRobot == tijera && elegidoUser == papel){
+		alert("You lost! :( " + opciones[elegidoRobot] + " Cuts " + opciones[elegidoUser]);
+	}		
+	else if(elegidoRobot == spock && elegidoUser == papel){
+		alert("You Win! :) " + opciones[elegidoUser] + " Disproves " + opciones[elegidoRobot]);
 	}
-
-	else if(elegidoUser == tijera){ //cuando el user seleciono tijera
-
-		if(elegidoRobot == spock){
-			alert("You lost! :( " + opciones[elegidoRobot] + " Smashes " + opciones[elegidoUser]);
-		}
-		else if(elegidoRobot == lagarto){
-			alert("You Win! :) " + opciones[elegidoUser] + " Decapitates " + opciones[elegidoRobot]);
-		}
-		else{
-			alert("Falta");
-		}	
-
-	}
+	else if(elegidoRobot == lagarto && elegidoUser == papel){
+		alert("You lost :( " + opciones[elegidoRobot] + " Eats " + opciones[elegidoUser]);
+	}	
 	
 
-	else if(elegidoUser == lagarto){ //cuando el user seleciono lagarto
-		
-		if(elegidoRobot == spock){
-			alert("You Win! :) " + opciones[elegidoUser] + " Poisons " + opciones[elegidoRobot]);
-		}			
-		else{
-			alert("falta");
-		}	
+	//cuando el user seleciono tijera
+	else if(elegidoRobot == spock && elegidoUser == tijera){
+		alert("You lost! :( " + opciones[elegidoRobot] + " Smashes " + opciones[elegidoUser]);
 	}
+	else if(elegidoRobot == lagarto && elegidoUser == tijera){
+		alert("You Win! :) " + opciones[elegidoUser] + " Decapitates " + opciones[elegidoRobot]);
+	}		
+	
+	//cuando el user seleciono lagarto		
+	if(elegidoRobot == spock && elegidoUser == lagarto){
+		alert("You Win! :) " + opciones[elegidoUser] + " Poisons " + opciones[elegidoRobot]);
+	}		
+			
+	
 
 	// creo que ya no se necesita 
 	/*else if(elegidoUser == spock){ //cuando el user seleciono spock
