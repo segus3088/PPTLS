@@ -79,7 +79,6 @@ function comparar(elegidoUser, elegidoRobot){
 	else if(elegidoRobot == lagarto && elegidoUser == papel){
 		alert("You lost :( " + opciones[elegidoRobot] + " Eats " + opciones[elegidoUser]);
 	}	
-	
 
 	//cuando el user seleciono tijera
 	else if(elegidoRobot == spock && elegidoUser == tijera){
@@ -87,32 +86,59 @@ function comparar(elegidoUser, elegidoRobot){
 	}
 	else if(elegidoRobot == lagarto && elegidoUser == tijera){
 		alert("You Win! :) " + opciones[elegidoUser] + " Decapitates " + opciones[elegidoRobot]);
-	}		
+	}
 	
 	//cuando el user seleciono lagarto		
-	if(elegidoRobot == spock && elegidoUser == lagarto){
+	else if(elegidoRobot == spock && elegidoUser == lagarto){
 		alert("You Win! :) " + opciones[elegidoUser] + " Poisons " + opciones[elegidoRobot]);
-	}		
-			
+	}	
+
+	// --- aquí es lo anterioro pero cuando se eligen el robot
+
+	//cuando el robot seleciono piedra
+
+	else if(elegidoUser == papel && elegidoRobot == piedra){
+		alert("You Win! :) " + opciones[elegidoUser] + " Covers " + opciones[elegidoRobot]);
+	}
+	else if(elegidoUser == tijera && elegidoRobot == piedra){
+		alert("You lost! :( " + opciones[elegidoRobot] + " Crushes " + opciones[elegidoUser]);
+	}
+	else if(elegidoUser == lagarto && elegidoRobot == piedra){
+		alert("You lost! :( " + opciones[elegidoRobot] + " Crushes " + opciones[elegidoUser]);
+	}
+	else if(elegidoUser == spock && elegidoRobot == piedra){
+		alert("You Win! :) " + opciones[elegidoUser] + " Vaporizes " + opciones[elegidoRobot]);
+	}
 	
 
-	// creo que ya no se necesita 
-	/*else if(elegidoUser == spock){ //cuando el user seleciono spock
+	//cuando el robot seleciono papel
 
-		if(elegidoRobot == papel){
-			alert("You lost! :(");
-		}
-		else if(elegidoRobot == tijera){
-			alert("You Win! :)")
-		}
-		else if(elegidoRobot == lagarto){
-			alert("You falta :P");
-		}
-		else if(elegidoRobot == piedra){
-			alert("You lost! :( " + opciones[elegidoRobot] + " Vaporizes " + opciones[elegidoUser]);
-		}
-	}*/
+	else if(elegidoUser == tijera && elegidoRobot == papel){
+		alert("You Win! :) " + opciones[elegidoUser] + " Cuts " + opciones[elegidoRobot]);
+	}		
+	else if(elegidoUser == spock && elegidoRobot == papel){
+		alert("You lost! :( " + opciones[elegidoRobot] + " Disproves " + opciones[elegidoUser]);
+	}
+	else if(elegidoUser == lagarto && elegidoRobot == papel){
+		alert("You Win! :) " + opciones[elegidoUser] + " Eats " + opciones[elegidoRobot]);
+	}	
 
+	//cuando robot seleciono tijera
+	else if(elegidoUser == spock && elegidoRobot == tijera){
+		alert("You Win! :) " + opciones[elegidoUser] + " Smashes " + opciones[elegidoRobot]);
+	}
+	else if(elegidoUser == lagarto && elegidoRobot == tijera){
+		alert("You lost! :( " + opciones[elegidoRobot] + " Decapitates " + opciones[elegidoUser]);
+	}
+	
+	//cuando el robot seleciono lagarto		
+	else if(elegidoUser == spock && elegidoRobot == lagarto){
+		alert("You lost! :( " + opciones[elegidoRobot] + " Poisons " + opciones[elegidoUser]);
+	}
+
+	//ahora todo lo anterios al contrario de eleccione			
+	
+	
 }
 
 //Me genera un numero aleatorio entero entre un minimo y un maximo
